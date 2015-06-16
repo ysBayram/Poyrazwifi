@@ -1,0 +1,80 @@
+/*
+	AnythingSlider v1.5.10+ Default (base) theme
+	By Chris Coyier: http://css-tricks.com
+	with major improvements by Doug Neiner: http://pixelgraphics.us/
+	based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+/******* SET DEFAULT DIMENSIONS HERE ********/
+div.anythingSlider {
+	display: block;
+	width: 940px;
+	height: 380px;
+	margin: 0 auto;
+	overflow: hidden; /* needed for Opera and Safari */
+}
+
+/****** SET COLORS HERE *******/
+div.anythingSlider .anythingWindow {  
+/*	border-top: 3px solid #777;
+	border-bottom: 3px solid #777;*/
+}
+div.anythingSlider .start-stop {
+	background-color: #040;
+	color: #fff;
+}
+div.anythingSlider .start-stop.playing {
+	background-color: #800;
+}
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
+	color: #ddd;
+}
+
+/* Active State */
+div.anythingSlider.activeSlider .anythingWindow {
+	border-color: #fff;
+}
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
+	color: #fff;
+}
+
+/**** DO NOT CHANGE BELOW THIS LINE ****/
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 940px;
+	height: 380px;
+}
+/* wrapper: 45px right & left padding for the arrows, 28px @ bottom for navigation */
+div.anythingSlider {
+	position: relative;
+	padding: 0 45px 28px 45px;
+}
+/* anythingSlider base UL */
+ul.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+ul.anythingBase li.panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.home-page-header ul.anythingBase li.panel {
+	padding-top:0;
+}
+
+/* Navigation Links */
+div.anythingSlider .anythingControls { outline: 0; display: none; }
+div.anythingSlider .thumbNav { margin: 0; padding: 0; }
+div.anythingSlider .thumbNav li { display: inline; }

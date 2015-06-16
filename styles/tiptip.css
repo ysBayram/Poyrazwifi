@@ -1,0 +1,61 @@
+/* TipTip CSS - Version 1.2 */
+
+#tiptip_holder {
+	position: absolute;
+	z-index: 99999;
+	display: none;
+	opacity: 0.8;
+	left: 0;
+	top: -4px; }
+
+#tiptip_holder.tip_top { padding-bottom: 5px; }
+#tiptip_holder.tip_bottom {	padding-top: 5px; }
+#tiptip_holder.tip_right { padding-left: 5px; }
+#tiptip_holder.tip_left { padding-right: 5px; }
+
+#tiptip_content {
+	padding: 4px 8px 5px 8px;
+	border-radius: 3px;
+	font-family: arial;
+	line-height: 12px;
+	background: #000;
+	background: rgba(0,0,0,0.80);
+	font-size: 11px;
+	color:#fff; }
+
+#tiptip_arrow, #tiptip_arrow_inner {
+	border-color: transparent;
+	border-style: solid;
+	position: absolute;
+	border-width: 5px;
+	height: 0;
+	width: 0; }
+
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	border-top-color: #000;
+	border-top-color: rgba(0,0,0,0.80);
+	margin-left: -5px;
+	margin-top: -5px; }
+
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	border-bottom-color: #000;
+	border-bottom-color: rgba(0,0,0,0.80);
+	margin-left: -5px;
+	margin-top: -5px; }
+
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	border-right-color: #000;
+	border-right-color: rgba(0,0,0,0.80);
+	margin-left: -5px;
+	margin-top: -5px; }
+
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	border-left-color: #000;
+	border-left-color: rgba(0,0,0,0.80);
+	margin-left: -5px;
+	margin-top: -5px; }
+
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
+	#tiptip_content { padding: 4px 8px 5px 8px; }
+}

@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="WebPortal_v1.admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>Yönetim Paneli</title>
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/spinner/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/spinner/ui.spinner.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wysiwyg/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wysiwyg/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wysiwyg/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wysiwyg/wysiwyg.table.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/flot/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/flot/excanvas.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/tables/colResizable.min.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/forms.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/autogrowtextarea.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/autotab.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.validationEngine-en.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.dualListBox.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.inputlimiter.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/forms/jquery.tagsinput.min.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/other/calendar.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/other/elfinder.min.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/uploader/plupload.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/uploader/plupload.html5.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/uploader/plupload.html4.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.progress.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.alerts.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.colorpicker.js"></script> 
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wizards/jquery.form.wizard.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/wizards/jquery.validate.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.breadcrumbs.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.collapsible.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.ToTop.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.listnav.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.sourcerer.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.timeentry.min.js"></script>
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/plugins/ui/jquery.prettyPhoto.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/custom.js"></script>
+
+    <script type="text/javascript" src="<%#Request.PhysicalPath %>/admin/js/charts/chart.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        
+    <script src="js/plugins/forms/old_Validate/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/plugins/forms/old_Validate/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#form1").validationEngine();
+        });
+        function Gizle(obj) {
+            obj = document.getElementById(obj);
+            obj.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="smMain" runat="server">
+        </asp:ScriptManager>
+        <!-- Top navigation bar -->
+        <div id="topNav">
+            <div class="fixed">
+                <div class="wrapper">
+                    <div class="welcome">
+                        <a href="profile.aspx" title="">
+                            <img src="<%#Request.PhysicalPath %>/admin/images/userPic.png" alt="" /></a><span runat="server" id="spanAdmin">Hoşgeldin, Yönetici!</span>
+                    </div>
+                    <div class="userNav">
+                        <ul>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/login.aspx?exit=1" title="">
+                                <img src="<%#Request.PhysicalPath %>/admin/images/icons/dark/exit.png" alt="" /><span>Çıkış</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="fix"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div id="header" class="wrapper">
+            <div class="logo">
+                <a href="/" title="">
+                    <img src="<%#Request.PhysicalPath %>/admin/images/loginLogo.png" alt="" /></a>
+            </div>
+            <div class="middleNav">
+                <ul>
+                    <li class="iHome"><a href="<%#Request.PhysicalPath %>/admin/default.aspx" title=""><span>Yönetim Paneli</span></a></li>
+                    <li class="iProfile"><a href="<%#Request.PhysicalPath %>/admin/profil.aspx" title=""><span>Profil</span></a></li>
+                    <li class="iSettings"><a href="<%#Request.PhysicalPath %>/admin/ayar.aspx" title=""><span>Ayarlar</span></a></li>
+                    <li class="iExit"><a href="<%#Request.PhysicalPath %>/admin/login.aspx?exit=1" title=""><span>Çıkış</span></a></li>
+                </ul>
+            </div>
+            <div class="fix"></div>
+        </div>
+
+
+        <!-- Content wrapper -->
+        <div class="wrapper">
+
+            <!-- Left navigation -->
+            <div class="leftNav">
+                <ul id="menu">
+                    <li class="home"><a href="<%#Request.PhysicalPath %>/admin/default.aspx" title=""><span>Yönetim Paneli</span></a></li>
+                    <li class="pic"><a href="<%#Request.PhysicalPath %>/admin/manset.aspx" title=""><span>Manşet Yönetimi</span></a></li>
+                    <li class="tables"><a href="<%#Request.PhysicalPath %>/admin/tarife.aspx" title=""><span>Tarife Yönetimi</span></a></li>
+                    <li class="pic"><a href="<%#Request.PhysicalPath %>/admin/menu.aspx" title=""><span>Menu Yönetimi</span></a></li>
+                    <li class="gallery"><a href="#" title="" class="exp"><span>Multimedia</span><span class="numberLeft">3</span></a>
+                        <ul class="sub">
+                            <li><a href="<%#Request.PhysicalPath %>/admin/galeri.aspx" title="">Galeri</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/album.aspx" title="">Albümler</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/multiup.aspx" title="">Toplu Resim Yönetimi</a></li>
+                        </ul>
+                    </li>
+                    <li class="del"><a href="<%#Request.PhysicalPath %>/admin/proj_hizmet.aspx" title=""><span>Projeler & Hizmetler</span></a></li>
+                    <li class="typo"><a href="#" title="Sayfa & Duyuru" class="exp"><span>Sayfa & Duyuru</span><span class="numberLeft">2</span></a>
+                        <ul class="sub">
+                            <li><a href="<%#Request.PhysicalPath %>/admin/sayfa.aspx?tur=0" title="">Sayfa Yönetimi</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/sayfa.aspx?tur=1" title="">Duyuru Yönetimi</a></li>                                           </ul>
+                    </li>
+                    <li class="phone"><a href="#" title="" class="exp"><span>İletişim</span><span class="numberLeft">2</span></a>
+                        <ul class="sub">
+                            <li><a href="<%#Request.PhysicalPath %>/admin/iletisim.aspx" title="">İletişim</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/social.aspx" title="">Sosyal ağlar</a></li>
+                        </ul>
+                    </li>      
+                    <li class="del"><a href="#" title="" class="exp"><span>Kontroller</span><span class="numberLeft">3</span></a>
+                        <ul class="sub">
+                            <li><a href="<%#Request.PhysicalPath %>/admin/akordiyon.aspx" title="">Akordiyon</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/carousel.aspx" title="">Carousel</a></li>
+                            <li><a href="<%#Request.PhysicalPath %>/admin/dosya.aspx" title="">Dosyalar</a></li>
+                        </ul>
+                    </li>               
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <div class="nNote nFailure hideit" runat="server" visible="false" id="divSonuc" onclick="javascript:Gizle('divSonuc');">
+                </div>
+                <!-- ******ORTA ALAN ****** -->
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+                <!-- /******ORTA ALAN ****** -->
+            </div>
+            <div class="fix"></div>
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="wrapper">
+                <span>&copy; Copyright 2013. Tüm hakları saklıdır. YSB was here :) <a href="#" title="">Mirza41</a></span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

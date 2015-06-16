@@ -1,0 +1,157 @@
+/* 
+    Document   : fancy-slider.css
+    Created on : 2012-03-16, 03:03:27
+    Author     : michal
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.fancyslider-slides{
+	height:100%;
+	position:relative;
+}
+
+.fancyslider-slides>div{
+	opacity:0;
+	display:none;
+	height:100%;
+	position:absolute;
+	width:100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.fancyslider-slides>div:first-child{
+	opacity: 1;
+	z-index: 2;
+	display:block;
+}
+
+.fancyslider-loading .fancyslider-slides>div:first-child{
+	opacity:0;
+	
+}
+
+.fancyslider-loading{
+	background: url('../images/loading.gif') 50% 50% no-repeat;
+}
+
+.fancyslider-bullets.fancyslider-loading, .fancyslider-loading .fancyslider-prev, .fancyslider-loading .fancyslider-next{
+	opacity:0;
+}
+.fancyslider-bullets.fancyslider-loading{
+	background:transparent;
+}
+
+.fancyslider-slides .fancyslider-image{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.fancyslider{
+	position:relative;
+	height:460px;
+}
+
+.fancyslider-prev, .fancyslider-next{
+	display:block;
+	width:40px;
+	height:40px;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	left:50%;
+	z-index:999999;
+	margin-left:-490px;
+	background: url('../images/arrows/slider-arrows2.png');
+}
+.fancyslider-prev:hover{
+	background-position: 0 -40px;
+}
+
+.fancyslider-next{
+	margin-left:450px;
+	position:absolute;
+	z-index:999999;
+	background-position: -40px 0;
+}
+
+.fancyslider-next:hover{
+	background-position: -40px -40px;
+}
+
+.fancyslider-content{
+	position:relative;
+	width:450px;
+	top:52px;
+	padding-left:40px;
+}
+
+.fancyslider-content h1{
+	font-size:50px;
+	line-height:55px;
+	font-weight:bold;
+	margin-bottom:30px;
+}
+
+.fancyslider-content p{
+	margin-bottom:25px;
+}
+
+/* Dark slide */
+.fancyslider-slide-dark h1, .fancyslider-slide-dark p{
+	color: #fff;
+}
+
+/* slide with content on the right */
+
+.fancyslider-content-right{
+	margin-left: 390px;
+}
+
+/* bullets */
+
+.slider-decoration-bottom .fancyslider-bullets{
+	text-align:center;
+	width:400px;
+	margin: 0 auto;
+	margin-top:-4px;
+}
+
+.slider-decoration-bottom a{
+	display:inline-block;
+	height:5px;
+	width:40px;
+	background:#fff;
+	margin-left:1px;
+}
+
+.slider-decoration-bottom a.active{
+	cursor:default;
+}
+
+.slider-decoration-bottom a:first-child{
+	margin-left:0;
+}
+
+/* boxed version */
+
+.home-page-header{
+	overflow:hidden;
+}
+
+body.boxed .fancyslider-boxed{
+	width:1200px;
+	margin-left:-100px;
+}

@@ -1,0 +1,92 @@
+/*
+	AnythingSlider v1.5.10 Minimalist Round Theme
+	By Rob Garrison
+*/
+
+/****** SET COLORS HERE *******/
+/* Default State */
+div.anythingSlider-minimalist-round .anythingWindow {
+	border: none;
+}
+/*div.anythingSlider-minimalist-round .thumbNav a:hover, div.anythingSlider-minimalist-round .thumbNav a {
+	background: url("../images/sliders/slider-bullets.png") no-repeat;
+	background-position: 0px 0px;
+}*/
+
+/* Active State */
+div.anythingSlider-minimalist-round.activeSlider .anythingWindow {
+	border: none;
+}
+/*div.anythingSlider-minimalist-round.activeSlider .thumbNav a:hover{
+	border: none;
+	background-position: 0px 0px;
+}*/
+
+div.anythingSlider-minimalist-round.activeSlider .thumbNav a.cur {
+	border: none;
+	background-position: 0px -13px;
+}
+
+/*div.anythingSlider-minimalist-round .start-stop:hover, div.anythingSlider-minimalist-round .start-stop.hover {
+	color: #fff;
+}*/
+
+/* Navigation Links */
+div.anythingSlider-minimalist-round .anythingControls {
+	position: absolute;
+	bottom: 6px;
+}
+div.anythingSlider-minimalist-round .thumbNav {
+	z-index: 990;
+	overflow: auto;
+}
+/*div.anythingSlider-minimalist-round .thumbNav li {
+	display: block;
+	float: left;
+	padding-left: 10px;
+}
+div.anythingSlider-minimalist-round .thumbNav a {
+	display: block;
+	height: 13px;
+	width: 12px;
+	padding:0px;
+	margin: 0;
+	outline: 0px;
+}*/
+
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+div.anythingSlider-minimalist-round.rtl .thumbNav a { float: right; } /* reverse order of nav links */
+div.anythingSlider-minimalist-round.rtl .thumbNav { float: left; }    /* move nav link group to left */
+
+/* Autoplay Start/Stop button */
+div.anythingSlider-minimalist-round .start-stop {
+	margin: 3px;
+	padding: 0;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	position: relative;
+	bottom: 2px;
+	left: 0;
+	z-index: -1;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	border: none;
+}
+
+/* Extra - replace defaults */
+div.anythingSlider-minimalist-round {
+	padding: 0 0 0 0;
+}
+
+.home-page-header div.anythingSlider-minimalist-round {
+	padding: 0 0 45px 0;
+}
+
+/* text indent moved to span inside "a", for IE7; apparently, a negative text-indent on an "a" link moves the link as well as the text */
+div.anythingSlider-minimalist-round .arrow a span, div.anythingSlider-minimalist-round .thumbNav a span, div.anythingSlider-minimalist-round .start-stop span {
+	display: block;
+	line-height: 1px; /* needed for IE7 */
+	text-indent: -9999px;
+}

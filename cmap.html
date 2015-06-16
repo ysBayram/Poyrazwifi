@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kapsama Alanları</title>
+<script
+src="http://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+
+<style>
+      html, body, #googleMap {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+
+<script>
+
+var citymap = {};
+citymap['dincnet'] = {
+  center: new google.maps.LatLng(40.717910,29.826866),
+  radius:1000
+};
+citymap['kadirga'] = {
+  center: new google.maps.LatLng(40.688060,29.872367),
+  radius:3000
+};
+citymap['gozlemen'] = {
+  center: new google.maps.LatLng(40.708111, 29.822779),
+  radius:3000
+};
+citymap['pop3'] = {
+  center: new google.maps.LatLng(40.685351, 29.851704),
+  radius:1000
+};
+citymap['pop4'] = {
+  center: new google.maps.LatLng(40.702114, 29.862328),
+  radius:1000
+};
+citymap['pop5'] = {
+  center: new google.maps.LatLng(40.701781, 29.866014),
+  radius:1000
+};
+citymap['pop6'] = {
+  center: new google.maps.LatLng(40.698986, 29.860589),
+  radius:1000
+};
+citymap['pop7 kadırga'] = {
+  center: new google.maps.LatLng(40.687956, 29.872497),
+  radius:1000
+};
+citymap['pop8'] = {
+  center: new google.maps.LatLng(40.682628, 29.866553),
+  radius:1000
+};
+citymap['pop9'] = {
+  center: new google.maps.LatLng(40.694214, 29.849664),
+  radius:1000
+};
+citymap['pop10'] = {
+  center: new google.maps.LatLng(40.708153, 29.806022),
+  radius:1000
+};
+citymap['pop11'] = {
+  center: new google.maps.LatLng(40.699303, 29.819647),
+  radius:1000
+};
+citymap['pop12'] = {
+  center: new google.maps.LatLng(40.703192, 29.828614),
+  radius:1000
+};
+citymap['pop13'] = {
+  center: new google.maps.LatLng(40.716153, 29.837967),
+  radius:1000
+};
+citymap['pop14'] = {
+  center: new google.maps.LatLng(40.720681, 29.832753),
+  radius:1000
+};
+citymap['pop15'] = {
+  center: new google.maps.LatLng(40.713558, 29.831544),
+  radius:1000
+};
+citymap['pop16'] = {
+  center: new google.maps.LatLng(40.693969, 29.832808),
+  radius:1000
+};
+citymap['pop17'] = {
+  center: new google.maps.LatLng(40.702736, 29.841083),
+  radius:1000
+};
+citymap['pop18'] = {
+  center: new google.maps.LatLng(40.716275, 29.813756),
+  radius:1000
+};
+citymap['pop19'] = {
+  center: new google.maps.LatLng(40.714600, 29.813431),
+  radius:1000
+};
+citymap['pop20'] = {
+  center: new google.maps.LatLng(40.712139, 29.815017),
+  radius:1000
+};
+citymap['pop21'] = {
+  center: new google.maps.LatLng(40.717383, 29.820658),
+  radius:1000
+};
+citymap['pop22'] = {
+  center: new google.maps.LatLng(40.673331, 29.884408),
+  radius:1000
+};
+citymap['pop23'] = {
+  center: new google.maps.LatLng(40.694269, 29.945761),
+  radius:3000
+};
+
+var cityCircle;
+
+function initialize()
+{  
+   var mapOptions = {
+    zoom: 13,
+    center: new google.maps.LatLng(40.702818,29.874000),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  
+var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+for (var city in citymap) {
+    
+    var CircleOptions = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.2,
+      map: map,
+      center: citymap[city].center,
+      radius: citymap[city].radius
+    };
+    cityCircle = new google.maps.Circle(CircleOptions);
+  }
+  
+  var marker=new google.maps.Marker({
+  position: citymap['dincnet'].center,
+  });
+  
+ marker.setMap(map);
+ 
+ var infowindow = new google.maps.InfoWindow({
+  content:'<div style="width:200px; height:40px;"><strong>Poyrazwifi Telekomünikosyon</strong></div>'
+  });
+
+infowindow.open(map,marker);
+  
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googleMap" ></div>
+</body>
+</html>

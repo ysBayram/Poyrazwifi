@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebPortal_v1.Site" %>
+
+<%@ Register Src="~/user_controls/Social.ascx" TagName="Social_Network" TagPrefix="ucSocial" %>
+<%@ Register Src="~/user_controls/menu.ascx" TagName="Menu" TagPrefix="ucMenu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title runat="server" id="Site_Title"></title>
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="styles/site.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/superfish.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/tiptip.css" media="screen" />
+    
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollto.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tiptip.minified.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.flowy.js"></script>        
+      
+    
+    <link rel="stylesheet" type="text/css" href="styles/carousel.css" media="screen" />  
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script> 
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.fancybox").fancybox();
+        });
+    </script>
+
+    <!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="styles/ie8.css"/>
+		<script type="text/javascript" src="js/html5.js"></script>
+	    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body class="boxed">
+    <form id="form1" runat="server">
+        <div id="background" class="scrollable site-background">
+            <div id="background-front" class="site-background">
+                <div class="main-wrapper">
+                    <div id="divHeader" class="logo-menu-container center-logo-style" runat="server">
+                        <div class="wrapper">
+                            <div id="logo" style="overflow:hidden; width:940px;" runat="server">
+                                <a href="default.aspx" class="image-link">
+                                <img runat="server" id="Site_Logo" src="images/logo.png" alt="Logo" width="940" />
+                                </a>                               
+                            </div>
+                            <ucMenu:Menu runat="server" id="ucMenu"></ucMenu:Menu>
+
+                            <div style="float:right;">
+                                <p>Sosyal Ağlarda <strong class="invent-color">BİZ</strong></p>
+                                <ucSocial:Social_Network ID="ucSocial_top" runat="server" />
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        <div class="logo-menu-container-bottom"></div>
+                    </div>
+                    <!--[]>****************************Content Place Holderlar BURADAN BAŞLIYOR****************************<![]-->
+                    <asp:ContentPlaceHolder ID="cphHeader" runat="server"></asp:ContentPlaceHolder>
+                    <div class="wrapper">
+                        <asp:ContentPlaceHolder ID="cphOrtaAlan" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <asp:ContentPlaceHolder ID="cphFooter" runat="server"></asp:ContentPlaceHolder>
+                    <!--[]>****************************Content Place Holderlar BURADA BİTTİ****************************<![]-->
+
+                    <footer class="bottom-page-color site-footer">
+                        <div class="wrapper">
+                            <p class="left">Copyright © 2013 By <a class="invent-color" href="<%#Request.PhysicalPath %>/admin/">YSB Group</a>. All Rights Reserved.</p>
+                            <a href="#" class="scroll-to-top" title="To top"></a>
+                            <ucSocial:Social_Network ID="ucSocial_bottom" runat="server" />
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

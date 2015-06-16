@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPortal_v1", "WebPortal_v1.csproj", "{3CA0135D-FC6E-4474-B21B-7874A481C8FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CA0135D-FC6E-4474-B21B-7874A481C8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA0135D-FC6E-4474-B21B-7874A481C8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA0135D-FC6E-4474-B21B-7874A481C8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA0135D-FC6E-4474-B21B-7874A481C8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

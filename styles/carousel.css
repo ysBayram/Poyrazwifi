@@ -1,0 +1,186 @@
+.jcarousel-controls{
+	position: relative;
+	
+}
+
+.arrow-left-box, .arrow-right-box {
+	display: block;
+	width:30px;
+	float: left;
+	height: 100px;
+}
+
+.jcarousel-controls .jcarousel-left, .jcarousel-controls .jcarousel-right{
+	position: absolute;
+	top: 35px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.big .jcarousel-controls .jcarousel-left, .big .jcarousel-controls .jcarousel-right{
+	top: 53px;
+}
+
+.jcarousel-900 {
+	width: 880px;
+	margin: 0 0 10px 0 ;
+	float: left;
+}
+
+.jcarousel-controls .jcarousel-left{
+	background: url('../images/arrows/carousel-arrows2.png') 0 0 no-repeat;
+	left:-20px;
+}
+
+.jcarousel-controls .jcarousel-left:hover{
+	background-position: 0 -40px;
+}
+
+.jcarousel-controls .jcarousel-left.disabled:hover{
+	background-position: 0 0;
+}
+
+.jcarousel-controls .jcarousel-right{
+	background: url('../images/arrows/carousel-arrows2.png') -40px 0px no-repeat;
+	right: -20px;
+}
+.jcarousel-controls .jcarousel-right:hover{
+	background-position: -40px -40px;
+}
+
+.jcarousel-controls .jcarousel-right.disabled:hover{
+	background-position: -40px 0;
+}
+
+.jcarousel-controls .jcarousel-next.disabled,.jcarousel-controls .jcarousel-prev.disabled{
+	opacity:0.2;
+}
+
+.jcarousel-controls .jcarousel-left.disabled:hover, .jcarousel-controls .jcarousel-right.disabled:hover{
+	cursor:default;
+}
+
+.jcarousel-skin-horizontal1 {
+	padding-left: 0;
+	list-style: none;
+}
+
+.jcarousel-skin-horizontal1 li{
+	width:200px;
+	padding:0 5px 0 0;
+	margin: 0 10px;
+}
+
+.jcarousel-skin-horizontal1 .attachment-invent-small { display: block; }
+
+.jcarousel-skin-horizontal1 .invent-button { margin-top: -5px; }
+
+.testimonials-carousel blockquote *{
+	text-align: center;
+	font-family: arial;
+	padding: 20px 0 0 0;
+}
+
+.testimonials-carousel li{
+	width:875px;
+	padding:0 15px;
+}
+
+.testimonials-carousel blockquote,.testimonials-carousel blockquote *{
+	background:transparent;
+}
+
+.testimonials-carousel blockquote{
+	padding-bottom:0px;
+	margin: 0;
+}
+
+.testimonials-carousel h1, .testimonials-carousel h2, .testimonials-carousel h3,.testimonials-carousel h4, .testimonials-carousel h5{
+	padding: 10px;
+	margin: 0px;
+} 
+
+#content .testimonials-carousel blockquote *{
+	font-size:18px;
+	line-height:20px;
+	padding:20px 0 0 0;
+	text-align:center;
+}
+#content .testimonials-carousel blockquote p.strong{
+	font-size:12px;
+	line-height:10px;
+	margin-top:0;
+	padding-top:20px;
+	float:none;
+	text-align:right;
+}
+
+#content .testimonials-carousel .jcarousel-item{
+	display:block;
+}
+
+.testimonials-carousel-container{
+	margin-bottom:10px;
+}
+
+.testimonials-carousel{
+	overflow:hidden;
+	padding-top:20px;
+}
+
+.jcarousel-left-decorator{
+	background: url('../images/carousel/bg-left.png') left center no-repeat;
+	min-height:120px;
+	position:absolute;
+	width:22px;
+	left:0;
+	top:0;
+}
+
+.jcarousel-right-decorator{
+	background: url('../images/carousel/bg-right.png') left center no-repeat;
+	min-height:120px;
+	position:absolute;
+	width:22px;
+	right:0px;
+	top:0;
+}
+
+.jcarousel-skin-horizontal1 .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-horizontal1 .image-left{
+	margin-bottom: 15px;
+}
+
+.jcarousel-paginator{height:12px; display:block; text-align:center; padding:0 0 0px 0;}
+.jcarousel-paginator li{ width:12px; height:12px; background:url('../images/carousel/bullets.png') top center no-repeat; padding:0 4px; margin:0; display:inline-block;}
+.jcarousel-paginator li a{display:block; height:12px; width:12px; cursor:pointer}
+.jcarousel-paginator li.active{background-position: 4px -12px;}
+.jcarousel-paginator li.active a{cursor:default}
+
+.jcarousel-skin-horizontal1.hidden{
+	display:none;
+}
+
+.carousel-container .carousel-title {
+	text-align: center;
+	margin-bottom: 17px;
+}
+
+.jcarousel-220 {
+	width: 220px;
+	margin:0;
+	float: left;
+}
+
+.jcarousel-220 .jcarousel-skin-horizontal1 li{
+	width:220px;
+}
+
+.jcarousel-list { padding: 5px 0 0 0; }
+

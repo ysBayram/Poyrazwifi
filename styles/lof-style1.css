@@ -1,0 +1,158 @@
+.lof-slidecontent{
+	margin-bottom: 5px;
+	position:relative;
+	overflow:hidden; }
+
+.lof-slidecontent .preload{
+	position:absolute;
+	text-align:center;
+	background:#FFF;
+	z-index:100000;
+	height:100%;
+	width:100%;
+	left:0;
+	top:0; }
+
+.lof-slidecontent .preload div{
+	background: transparent url(../images/loading.gif) no-repeat scroll 50% 50%;
+	height:100%;
+	width:100%; }
+
+.lof-main-outer{
+	position:relative;
+	overflow:hidden;
+	height:100%;
+	z-index:3px;
+	width:900px; }
+
+/* description */
+.lof-main-item-desc{
+	background:url(../images/sliders/lof-desc-bg.png);
+	position:absolute;
+	z-index:100px;
+	padding:10px;
+	bottom:15px;
+	width:350px;
+	height:auto;
+	left:10px; }
+
+.lof-main-item-desc p{
+	font-family: times, serif; 
+	display: inline;
+	font-size:14px;
+	padding:0;
+	margin: 0; }
+
+.lof-main-item-desc h3{
+	line-height: 23px;
+	font-size: 23px;
+	padding:0;
+	margin:0; }
+
+.lof-main-item-desc h2{
+	margin:7px 0 0 0px;
+	font-size:18px;
+	padding:0; }
+
+.lof-main-item-desc h3 a{	
+	text-transform:uppercase;
+	text-decoration:none;
+	padding:2px 3px;
+	display:inline;
+	font-size:11px;
+	margin:0; }
+
+.lof-slidecontent a.readmore{
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	display: inline;
+	color: #1fb1ed; }
+
+.lof-slidecontent a.readmore:hover{
+	text-decoration: underline; }
+
+.lof-main-item-desc h3 i { font-size: 11px; }
+
+.lof-main-item-desc h3, .lof-main-item-desc h3 a, 
+.lof-main-item-desc p, .lof-main-item-desc h2 { 
+	color:#fff; }
+
+/* main flash */
+ul.lof-main-wapper{
+	background:transparent url(../images/loading.gif) no-repeat scroll 50% 50%;
+	position:absolute;
+	overflow:hidden;
+	padding:0px;
+	margin:0; }
+
+ul.lof-main-wapper li{
+	position:relative;
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	float:left; }
+
+.lof-opacity  li{
+	position:absolute;
+	float:inherit;
+	left:0;
+	top:0; }
+
+ul.lof-main-wapper li img{ padding:0px; }
+
+/* item navigator */
+.lof-navigator-wapper {
+	background:url(../images/sliders/lof-desc-bg.png) repeat;	
+	position:absolute;
+	padding:5px 0px;
+	bottom:30px;
+	right:10px; }
+
+.lof-navigator-outer{
+	position:relative;
+	overflow:hidden;
+	height:180px;
+	width:310px;
+	z-index:100;
+	color:#FFF;
+	float:left }
+
+ul.lof-navigator{
+	position:absolute;
+	width:100%;
+	padding:0;
+	margin:0;
+	top:0; }
+
+ul.lof-navigator li{
+	text-align:center;
+	list-style:none;
+	margin-left:0px;
+	overflow:hidden;
+	cursor:pointer;
+	display:block;
+	float:left;
+	padding:0; }
+
+ul.lof-navigator li img{
+	border:#666 solid 3px; }
+
+.lof-navigator-wapper .lof-next, .lof-navigator-wapper .lof-previous{
+	cursor:pointer;
+	display:block;
+	height:22px;
+	width:22px;
+	color:#FFF; }
+
+.lof-navigator-wapper .lof-next {
+	background:url(../images/sliders/lof-back-arrow.png) no-repeat right center;
+	margin:5px 1px 5px 8px;
+	margin-right:5px;
+	float:left;	}
+
+.lof-navigator-wapper .lof-previous {
+	background:url(../images/sliders/lof-next-arrow.png) no-repeat left center;
+	margin:5px 8px 5px 1px;
+	margin-left:5px;
+	float:left;	}
